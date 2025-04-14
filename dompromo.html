@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções DOM ATACADISTA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f8b500, #ff9900);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative; /* Para poder posicionar imagens sobre ele */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .beer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .beer-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .beer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .beer-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: #353535;
+        }
+
+        .beer-description {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .beer-card img {
+            width: 100%; 
+            height: auto; 
+            max-height: 200px; 
+            object-fit: contain; 
+            margin-bottom: 1rem;
+        }
+
+        .beer-images {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .beer-images img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Ajustando a altura do mapa */
+        #map {
+            height: 500px; /* Definindo altura fixa para o mapa */
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Mapa -->
+    <div id="map"></div>
+
+    <!-- Conteúdo -->
+    <div class="container">
+        <header>
+            <h1>🍺 Promoções DOM ATACADISTA</h1> 
+            <p>Encontre as melhores promoções para suas bebidas favoritas no DOM</p>
+            
+        </header>
+
+        <div class="beer-grid">
+            <div class="beer-card">
+                <img src="dom.jpg" alt="Logo do DOM">
+            </div>
+
+            <!-- Cards de Promoções de Bebidas -->
+            <div class="beer-card">
+                <img src="sptln.jpg" alt="Spaten LN">
+                <h3>Spaten LN</h3>
+                <p class="beer-description">Promoção: Leve 6 pague 5</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="colo.jpg" alt="Família Colorado 350ml">
+                <h3>Família Colorado 350ml</h3>
+                <p class="beer-description">Promoção: Leve 3 pague 2</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="bud.jpg" alt="Bud 473ml">
+                <h3>Bud 473ml</h3>
+                <p class="beer-description">Promoção: Leve 12 ganhe 20% de desconto</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="stella.jpg" alt="Stella Pure Gold 330ml">
+                <h3>Stella Pure Gold 330ml</h3>
+                <p class="beer-description">Promoção: Leve 12 pague 10</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="patagonia.jpg" alt="Linha Patagonia 350ml">
+                <h3>Linha Patagonia 350ml</h3>
+                <p class="beer-description">Promoção: Leve 3 pague 2</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="beats.jpg" alt="Beats LN">
+                <h3>Beats LN</h3>
+                <p class="beer-description">Promoção: Leve 4 pague 3</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="fusion.jpg" alt="Fusion 473ml">
+                <h3>Fusion 473ml</h3>
+                <p class="beer-description">Promoção: Leve 2 ganhe 20% de desconto</p>
+            </div>
+
+            <div class="beer-card">
+                <div class="beer-images">
+                    <img src="guarana.jpg" alt="Guaraná 2L">
+                    <img src="pepsi.jpg" alt="Pepsi 2L">
+                </div>
+                <h3>Guaraná 2L + Pepsi 2L</h3>
+                <p class="beer-description">Promoção: Na compra ganhe 15% de desconto</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carregamento do Google Maps API -->
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: { lat: -22.9068, lng: -43.1729 },
+            });
+
+            const locations = [
+                { lat: -23.0069, lng: -44.3243, name: "Angra – Japuíba" },
+                { lat: -23.0023, lng: -44.3245, name: "Angra – Praia da Chácara" },
+                { lat: -22.8911, lng: -42.3381, name: "Araruama" },
+                { lat: -22.9685, lng: -43.5213, name: "Campo Grande" },
+                { lat: -21.7556, lng: -41.3209, name: "Campos dos Goytacazes – Parque Pecuária" },
+                { lat: -21.7592, lng: -41.3164, name: "Campos dos Goytacazes – Parque Calabouço" },
+                { lat: -22.7851, lng: -43.3000, name: "Duque de Caxias" },
+                { lat: -22.9012, lng: -43.5884, name: "Duque de Caxias - Santa Cruz da Serra" },
+                { lat: -22.8870, lng: -43.3033, name: "Inhaúma" },
+                { lat: -21.1928, lng: -41.8693, name: "Itaperuna" },
+                { lat: -22.3745, lng: -41.7795, name: "Macaé" },
+                { lat: -22.9236, lng: -42.8547, name: "Maricá" },
+                { lat: -22.7874, lng: -43.4531, name: "Mesquita" },
+                { lat: -22.8873, lng: -43.1093, name: "Niterói" },
+                { lat: -22.8974, lng: -43.4231, name: "Realengo" },
+                { lat: -22.4669, lng: -44.4590, name: "Resende" },
+                { lat: -22.8060, lng: -43.4031, name: "São João de Meriti" },
+                { lat: -22.8681, lng: -41.9894, name: "São Pedro da Aldeia" },
+                { lat: -22.4136, lng: -42.9736, name: "Teresópolis" },
+                { lat: -22.9937, lng: -43.3584, name: "Taquara" }            ];
+
+            locations.forEach(location => {
+                const marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.name,
+                    icon: {
+                        url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                    }
+                });
+            });
+        }
+    </script>
+
+    <!-- Substitua "YOUR_GOOGLE_MAPS_API_KEY" pela sua chave da API -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Zv6oiRqD8aIQhzG0mcR91wuH4rmOses&callback=initMap"
+        async defer>
+    </script>
+
+</body>
+</html>

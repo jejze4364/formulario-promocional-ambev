@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções PADRÃO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f8b500, #ff9900);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .beer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .beer-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .beer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .beer-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: #353535;
+        }
+
+        .beer-description {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .beer-card img {
+            width: 100%; 
+            height: auto; /* A altura será proporcional */
+            max-height: 200px; /* Limita a altura máxima das imagens */
+            object-fit: contain; /* As imagens se ajustam sem distorcer a proporção */
+            margin-bottom: 1rem;
+        }
+        .beer-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espaçamento entre as imagens */
+    margin-bottom: 1rem;
+}
+
+.beer-images img {
+    width: 100px; /* Tamanho fixo para as imagens */
+    height: auto;
+    object-fit: contain; /* Mantém a proporção das imagens */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍺 Promoções PADRÃO</h1> 
+            <p>Encontre as melhores promoções para suas bebidas favoritas no PADRÃO</p>
+            <div class="beer-grid">
+                <div class="beer-card">
+                    <img src="padrão.jpg" alt="Logo do PADRÃO">
+                </div>
+    
+        </header>
+
+        <div class="beer-grid">
+            <div class="beer-card">
+                <img src="sptln.jpg" alt="Spaten LN">
+                <h3>Spaten LN</h3>
+                <p class="beer-description">Promoção: Leve 6 pague 5</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="colo.jpg" alt="Família Colorado 350ml">
+                <h3>Família Colorado 350ml</h3>
+                <p class="beer-description">Promoção: Leve 3 pague 2</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="bud.jpg" alt="Bud 473ml">
+                <h3>Bud 473ml</h3>
+                <p class="beer-description">Promoção: Leve 12 ganhe 20% de desconto</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="stella.jpg" alt="Stella Pure Gold 330ml">
+                <h3>Stella Pure Gold 330ml</h3>
+                <p class="beer-description">Promoção: Leve 12 pague 10</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="patagonia.jpg" alt="Linha Patagonia 350ml">
+                <h3>Linha Patagonia 350ml</h3>
+                <p class="beer-description">Promoção: Leve 3 pague 2</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="beats.jpg" alt="Beats LN">
+                <h3>Beats LN</h3>
+                <p class="beer-description">Promoção: Leve 4 pague 3</p>
+            </div>
+
+            <div class="beer-card">
+                <img src="fusion.jpg" alt="Fusion 473ml">
+                <h3>Fusion 473ml</h3>
+                <p class="beer-description">Promoção: Leve 2 ganhe 20% de desconto</p>
+            </div>
+
+            <div class="beer-card">
+                <div class="beer-images">
+                    <img src="guarana.jpg" alt="Guaraná 2L">
+                    <img src="pepsi.jpg" alt="Pepsi 2L">
+                </div>
+                <h3>Guaraná 2L + Pepsi 2L</h3>
+                <p class="beer-description">Promoção: Na compra ganhe 15% de desconto</p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha Sua Cerveja Preferida 🍻</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #ffbe0b;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 2.5em;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 10%;
+    }
+
+    /* Beer Button Styles */
+    .beer-btn {
+      background-color: #ffbe0b;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 150px;
+    }
+
+    .beer-btn:hover {
+      background-color: #f77f00;
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .beer-btn:focus {
+      outline: none;
+    }
+
+    .beer-btn span {
+      font-size: 1.5em;
+    }
+
+    /* Back Button Styles */
+    .back-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 50px;
+      display: block;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .container {
+        padding: 0 5%;
+      }
+
+      .beer-btn {
+        font-size: 1.1em;
+        height: 120px;
+      }
+
+      .back-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Escolha Sua Cerveja Preferida 🍻</h1>
+  <p>Selecione uma das opções abaixo para explorar mais sobre a sua cerveja favorita:</p>
+
+  <div class="container">
+    <!-- Cervejas -->
+    <button class="beer-btn" onclick="window.location.href='brahma.html'">
+      <span>Brahma</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='brahmazero.html'">
+      <span>Brahma Zero</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='spaten.html'">
+      <span>Spaten</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='corona.html'">
+      <span>Corona</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='coronacero.html'">
+      <span>Corona Cero</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='budweiser.html'">
+      <span>Budweiser</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='budzero.html'">
+      <span>Bud Zero</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='stella.html'">
+      <span>Stella Artois</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='becks.html'">
+      <span>Becks</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='antarctica.html'">
+      <span>Antarctica</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='michelob.html'">
+      <span>Michelob</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='colorado.html'">
+      <span>Colorado</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='patagonia.html'">
+      <span>Patagonia</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='original.html'">
+      <span>Original</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='bohemia.html'">
+      <span>Bohemia</span>
+    </button>
+    <button class="beer-btn" onclick="window.location.href='skol.html'">
+      <span>Skol</span>
+    </button>
+    <!-- Adicione outras cervejas aqui -->
+  </div>
+
+  <button class="back-btn" onclick="window.location.href='index.html'">Voltar</button>
+
+</body>
+
+</html>

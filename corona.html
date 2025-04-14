@@ -3,47 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corona - Conexão com a natureza</title>
+  <title>Corona - Liberdade e Conexão</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #001f85, #f5d5d5); /* Vermelho e bege */
+      color: #fff;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
       padding: 20px;
-      background: #e3f2fd; /* Azul claro */
-      color: #0d47a1; /* Azul profundo */
     }
+
     #result-container {
       max-width: 600px;
-      padding: 20px;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
     }
+
     h1 {
-      color: #045c9c;
+      color: #000e88;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: bold;
     }
-    button {
-      background: #fccc04
-;
-      color: #00111d;
-      border: none;
-      padding: 10px 20px;
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
       border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #000e88;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 8px;
       cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #000e88;
     }
   </style>
 </head>
 <body>
   <div id="result-container">
-    <h1>Corona - Viva lá fora</h1>
+    <h1>Corona - Liberdade e Conexão</h1>
     <p>
-      Aproveite o contato com a natureza e momentos ao ar livre com Corona. Uma cerveja refrescante para quem busca se conectar com o mundo exterior.
+      Para momentos ao ar livre e em conexão com a natureza, Corona é a escolha perfeita. Sinta a leveza e aproveite cada instante.
     </p>
-    <button onclick="window.location.href='index.html'">Refazer Pesquisa</button>
+    <form id="contact-form">
+      <button type="submit">QUERO MAIS PROMOÇÕES DE CORONA</button>
+    </form>
+
+    <button style="margin-top: 20px;" onclick="window.location.href='index.html'">Refazer Pesquisa</button>
   </div>
+
+  <script>
+    // Manipula o envio do formulário
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      event.preventDefault(); // Impede o envio normal do formulário
+     // Aqui você pode incluir qualquer lógica adicional antes do envio para o PHP
+      alert("INTERESSE REGISTRADO!");
+    // O formulário será enviado ao PHP para processamento
+      this.submit(); // Submete o formulário para o PHP
+    });
+  </script>
 </body>
 </html>

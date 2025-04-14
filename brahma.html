@@ -3,46 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brahma - Para todos os momentos</title>
+  <title>Brahma - Tradição e Sabor</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #d9001b, #f5d5d5); /* Vermelho e bege */
+      color: #fff;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
       padding: 20px;
-      background: #f5e4b8; /* Dourado leve */
-      color: #b80f0a; /* Vermelho clássico */
     }
+
     #result-container {
       max-width: 600px;
-      padding: 20px;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
     }
+
     h1 {
-      color: #b80f0a;
+      color: #d9001b;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: bold;
     }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
     button {
-      background: #b80f0a;
+      background-color: #d9001b;
       color: #fff;
       border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 8px;
       cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #b20016;
     }
   </style>
 </head>
 <body>
   <div id="result-container">
-    <h1>Brahma é a sua cara!</h1>
+    <h1>Brahma - A cerveja do Brasil</h1>
     <p>
-      Momentos de comunhão social merecem Brahma. Uma cerveja leve, acessível e perfeita para qualquer ocasião com os amigos.
-    </p>
-    <button onclick="window.location.href='index.html'">Refazer Pesquisa</button>
-  </div>
+      Nenhuma outra cerveja esteve tão presente na história do nosso país. 
+     Sempre próxima das pessoas, a marca Brahma representa aqueles 
+     que gostam de cerveja.  </p>
+     
+     <p>Isso pode soar muito comum, mas a gente gosta 
+      do que é comum. Sempre fizemos parte do cotidiano, das reuniões 
+      de amigos e de família. </p>
+     
+     <p>Caminhamos junto das histórias dos brasileiros, 
+      sempre com alegria. Nossa tradição tem como base esses momentos 
+      partilhados na mesa de bar, em cada brinde, em cada gol marcado pela 
+      seleção, em cada sorriso e em cada pedido por mais uma Brahma. </p>
+      <form id="contact-form">
+        <button type="submit">QUERO MAIS PROMOÇÕES DE BRAHMA</button>
+      </form>
+  
+      <button style="margin-top: 20px;" onclick="window.location.href='index.html'">Refazer Pesquisa</button>
+    </div>
+  
+    <script>
+      // Manipula o envio do formulário
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        event.preventDefault(); // Impede o envio normal do formulário
+       // Aqui você pode incluir qualquer lógica adicional antes do envio para o PHP
+        alert("INTERESSE REGISTRADO!");
+      // O formulário será enviado ao PHP para processamento
+        this.submit(); // Submete o formulário para o PHP
+      });
+    </script>
 </body>
 </html>

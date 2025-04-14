@@ -1,0 +1,337 @@
+/* Reset and Base Styles */
+* {
+  margin: 0; /* Remove margens de todos os elementos */
+  padding: 0; /* Remove o preenchimento de todos os elementos */
+  box-sizing: border-box; /* Ajusta o cálculo do tamanho de elementos para incluir bordas e padding */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+  background: linear-gradient(135deg, #0079c0 0%, #005490 100%); /* Define um fundo com gradiente */
+  margin: 0; /* Remove a margem padrão do body */
+  padding: 20px; /* Adiciona preenchimento ao redor do conteúdo */
+  display: flex; /* Usa flexbox para centralizar o conteúdo */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
+}
+
+/* Enhanced Container */
+.container {
+  background: rgba(255, 255, 255, 0.95); /* Cor de fundo branca com transparência */
+  padding: 40px; /* Adiciona preenchimento dentro do container */
+  border-radius: 24px; /* Cantos arredondados */
+  width: 90%; /* Largura do container 90% da tela */
+  max-width: 800px; /* Largura máxima de 800px */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor */
+  backdrop-filter: blur(10px); /* Aplica um desfoque no fundo do container */
+  animation: fadeIn 0.6s ease-out; /* Animação de fade-in ao carregar */
+}
+
+/* Typography */
+h1 {
+  color: #0079c0; /* Cor azul para o título */
+  font-size: 28px; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define a espessura da fonte */
+  text-align: center; /* Alinha o texto ao centro */
+  margin-bottom: 30px; /* Espaço abaixo do título */
+  padding: 15px; /* Adiciona preenchimento ao redor do título */
+  border-bottom: 3px solid #0079c0; /* Adiciona uma borda azul abaixo do título */
+}
+
+p {
+  color: #000000; /* Cor preta para o parágrafo */
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 1.6; /* Define a altura da linha */
+  margin-bottom: 25px; /* Espaço abaixo do parágrafo */
+  text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Base Question Container */
+#question-container {
+  display: flex; /* Usa flexbox para organizar os itens dentro do container */
+  flex-direction: column; /* Organiza os itens na vertical */
+  gap: 2rem; /* Espaçamento entre os itens */
+  width: 100%; /* Largura total do container */
+  max-width: 800px; /* Largura máxima de 800px */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 2rem; /* Preenchimento interno */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Question Title Styling */
+#question-container h2 {
+  color: #0079c0; /* Cor azul para o título da questão */
+  font-size: 1.5rem; /* Tamanho da fonte */
+  font-weight: 600; /* Espessura da fonte */
+  margin-bottom: 1.5rem; /* Espaço abaixo do título */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-bottom: 2px solid #e0e0e0; /* Borda abaixo do título */
+  padding-bottom: 0.75rem; /* Preenchimento abaixo do título */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Options Container - Common Styles */
+.options-container {
+  display: flex; /* Flexbox para organizar as opções */
+  flex-direction: column; /* Organiza as opções na vertical */
+  gap: 1rem; /* Espaço entre as opções */
+  width: 100%; /* Largura total do container */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Single Choice Option Styling */
+.options-container button {
+  background: white; /* Fundo branco para os botões */
+  border: 2px solid #e0e0e0; /* Borda cinza clara */
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 1rem 1.5rem; /* Preenchimento interno */
+  text-align: left; /* Alinha o texto à esquerda */
+  font-size: 1rem; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+  transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+  position: relative; /* Necessário para alguns efeitos */
+  display: flex; /* Flexbox para alinhar o conteúdo dentro do botão */
+  align-items: center; /* Alinha os itens no centro verticalmente */
+  width: 100%; /* Largura total */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.options-container button:hover {
+  border-color: #0079c0; /* Muda a cor da borda ao passar o mouse */
+  color: #000000; /* Muda a cor do texto */
+  background: #f8f9fa; /* Fundo cinza claro */
+  transform: translateY(-2px); /* Desloca o botão levemente para cima */
+  box-shadow: 0 4px 12px rgba(0, 121, 192, 0.1); /* Sombra suave ao redor do botão */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.options-container button:focus-visible {
+  outline: 3px solid #0079c0; /* Contorno azul quando o botão recebe foco */
+  outline-offset: 2px; /* Desloca o contorno para fora */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.options-container button.selected {
+  border-color: #0079c0; /* Borda azul quando selecionado */
+  background: #e6f3fa; /* Fundo azul claro quando selecionado */
+  color: #0079c0; /* Cor do texto azul */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Multiple Choice Option Styling */
+.options-container label {
+  display: flex; /* Flexbox para organizar os itens */
+  align-items: center; /* Alinha os itens no centro */
+  padding: 1rem 1.5rem; /* Preenchimento interno */
+  background: white; /* Fundo branco */
+  border: 2px solid #e0e0e0; /* Borda cinza clara */
+  border-radius: 12px; /* Bordas arredondadas */
+  cursor: pointer; /* Altera o cursor ao passar o mouse */
+  transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+  gap: 1rem; /* Espaçamento entre o texto e o ícone */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.options-container label:hover {
+  border-color: #0079c0; /* Borda azul ao passar o mouse */
+  background: #f8f9fa; /* Fundo cinza claro ao passar o mouse */
+  transform: translateY(-2px); /* Desloca o label levemente para cima */
+  box-shadow: 0 4px 12px rgba(0, 121, 192, 0.1); /* Sombra suave ao redor */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Custom Checkbox Design */
+.options-container input[type="checkbox"] {
+  appearance: none; /* Remove a aparência padrão do checkbox */
+  -webkit-appearance: none; /* Remove a aparência padrão no Safari */
+  width: 24px; /* Largura do checkbox */
+  height: 24px; /* Altura do checkbox */
+  border: 2px solid #0079c0; /* Borda azul */
+  border-radius: 6px; /* Bordas arredondadas */
+  background: white; /* Fundo branco */
+  cursor: pointer; /* Altera o cursor ao passar sobre o checkbox */
+  position: relative; /* Necessário para o ícone de seleção */
+  flex-shrink: 0; /* Impede que o checkbox encolha */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.options-container input[type="checkbox"]:checked {
+  background: #0079c0; /* Muda o fundo para azul quando selecionado */
+}
+
+.options-container input[type="checkbox"]:checked::after {
+  content: ""; /* Cria o ícone de seleção */
+  position: absolute; /* Posiciona o ícone dentro do checkbox */
+  left: 7px; /* Distância da esquerda */
+  top: 3px; /* Distância de cima */
+  width: 6px; /* Largura do ícone */
+  height: 12px; /* Altura do ícone */
+  border: solid white; /* Cor branca para o ícone */
+  border-width: 0 2px 2px 0; /* Define a espessura das bordas */
+  transform: rotate(45deg); /* Rotaciona o ícone para formar um X */
+}
+
+/* Multiple Choice Grid Layout */
+.options-container[data-question="2"] {
+  display: grid; /* Usa grid layout para as opções */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas automáticas */
+  gap: 1rem; /* Espaçamento entre as colunas */
+}
+
+/* Button Container */
+.button-container {
+  display: flex; /* Flexbox para organizar os botões */
+  justify-content: space-between; /* Distribui os botões igualmente */
+  width: 100%; /* Largura total do container */
+  gap: 1rem; /* Espaçamento entre os botões */
+}
+
+/* Primary Button Styling */
+.button-container button {
+  background: #0079c0; /* Cor de fundo azul */
+  border: none; /* Sem borda */
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 1rem 2rem; /* Preenchimento interno */
+  color: white; /* Cor do texto branca */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-weight: 600; /* Peso da fonte */
+  cursor: pointer; /* Altera o cursor para indicar interatividade */
+  transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+.button-container button:hover {
+  background: #005490; /* Cor de fundo mais escura ao passar o mouse */
+  transform: translateY(-2px); /* Leve movimento para cima */
+}
+
+/* Footer Styling */
+footer {
+  text-align: center; /* Alinha o texto do rodapé ao centro */
+  color: #666; /* Cor cinza para o texto */
+  font-size: 0.8rem; /* Tamanho da fonte reduzido */
+  margin-top: 2rem; /* Espaço acima do rodapé */
+}
+
+
+/* General Button Styles */
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  min-width: 150px;
+  padding: 12px 30px;
+  background-color: white;
+  color: #0056b3;
+  border: 2px solid #0056b3;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #0056b3;
+  color: white;
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Back Button Specific Styles */
+button.voltar {
+  background-color: white;
+  color: #0056b3;
+  border: 2px solid #0056b3;
+}
+
+button.voltar:hover {
+  background-color: #0079c0;
+  border-color: white;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #question-container {
+    padding: 1rem;
+  }
+
+  .options-container[data-question="2"] {
+    grid-template-columns: 1fr;
+  }
+
+  .options-container button,
+  .options-container label {
+    padding: 0.875rem 1.25rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button-container button {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+  }
+}
+
+/* Accessibility - High Contrast Mode */
+@media (prefers-contrast: high) {
+  .options-container button,
+  .options-container label {
+    border-width: 3px;
+  }
+
+  .options-container input[type="checkbox"] {
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .options-container[data-question="2"] {
+    grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+    gap: 15px; /* Aumentar espaçamento entre as opções */
+  }
+
+  .options-container[data-question="2"] label {
+    padding: 1rem; /* Aumentar área clicável */
+    font-size: 0.9rem; /* Ajustar tamanho da fonte */
+  }
+
+  .options-container[data-question="2"] input[type="checkbox"] {
+    width: 20px; /* Aumentar tamanho do checkbox */
+    height: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
